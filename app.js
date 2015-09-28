@@ -11,7 +11,7 @@ var app = express();
 // 设置 view 引擎
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use('/static', express.static('static'));
 app.use(AV.Cloud.CookieSession({ secret: 'YikeShop', maxAge: 3600000, fetchUser: true }));
 
 
