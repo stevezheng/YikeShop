@@ -12,3 +12,15 @@ ion-tabs.tabs-color-active-assertive .tab-item {
   color: #ffffff;
 }
 
+.home-bar {
+  position: fixed;
+  z-index: 999;
+  background: rgba(212, 46, 68, 0);
+}
+
+.home-bar-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+

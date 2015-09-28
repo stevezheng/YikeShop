@@ -16,6 +16,8 @@
       {image: 'http://ac-i8LBVLYg.clouddn.com/60fd14fa7a1bdf5f.jpg'},
       {image: 'http://ac-i8LBVLYg.clouddn.com/86b15c91915cb6ff.jpg'}
     ];
+    $scope.fakeSearchAd = '充话费 百万话费限时抢';
+
     init();
 
     ////////////////
