@@ -1,1 +1,4 @@
-/* Empty. Add your own CSS if you like */
+/*重置tabs样式*/
+ion-tabs.tabs-color-active-assertive .tab-item {
+   color: #C1C1C1;
+}
