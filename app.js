@@ -12,6 +12,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
+app.use('/app', express.static('app/www'));
 app.use(AV.Cloud.CookieSession({ secret: 'YikeShop', maxAge: 3600000, fetchUser: true }));
 
 
