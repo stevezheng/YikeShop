@@ -11,19 +11,19 @@ var jsdoc = require('gulp-jsdoc');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  models: ['./www/js/models/*.js'],
+  js: ['./app/www/js/**/*.js'],
 };
 
 gulp.task('default', ['sass', 'eslint']);
 
 // JS处理任务
-gulp.task('models', function () {
-  gulp.src('./models/*.js')      //引入所有需处理的JS
-    .pipe(concat('models.js'))                  //合并JS文件
-    .pipe(gulp.dest('./'))        //完整版输出
+gulp.task('js', function () {
+  gulp.src(paths.js)      //引入所有需处理的JS
+    .pipe(concat('app.js'))                  //合并JS文件
+    .pipe(gulp.dest('./app/www/lib/yike'))        //完整版输出
     .pipe(rename({suffix: '.min'}))         //重命名
     .pipe(uglify())                           //压缩JS
-    .pipe(gulp.dest('./'));        //压缩版输出
+    .pipe(gulp.dest('./app/www/lib/yike'));        //压缩版输出
 });
 
 gulp.task('docs', shell.task([
@@ -32,6 +32,6 @@ gulp.task('docs', shell.task([
 ]));
 
 gulp.task('watch', function () {
-  gulp.watch(paths.models, ['models']);
+  gulp.watch(paths.js, ['js']);
 });
 
