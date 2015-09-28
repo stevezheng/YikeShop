@@ -1,9 +1,11 @@
+var AV = require('leanengine');
+
 /**
  * @class
  * 用户类
  * @param {string} objectId
- * @param {string} username 用户名('')
- * @param {string} password 密码('')
+ * @param {string} username 用户名
+ * @param {string} password 密码
  */
 var User = AV.Object.extend('_User',
   /** @lends User.prototype */
@@ -44,3 +46,5 @@ var User = AV.Object.extend('_User',
         })
     }
   });
+
+module.exports = User;

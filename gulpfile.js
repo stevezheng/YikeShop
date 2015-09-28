@@ -28,7 +28,7 @@ gulp.task('models', function () {
 
 gulp.task('docs', shell.task([
   'mkdir -p dist/js-sdk-api-docs',
-  'JSDOCDIR=tools/jsdoc-toolkit/ sh tools/jsdoc-toolkit/jsrun.sh -d=dist/js-sdk-api-docs -t=tools/jsdoc-toolkit/templates/jsdoc models.js clouds/',
+  'JSDOCDIR=tools/jsdoc-toolkit/ sh tools/jsdoc-toolkit/jsrun.sh -d=dist/js-sdk-api-docs -t=tools/jsdoc-toolkit/templates/jsdoc models/ clouds/',
 ]));
 
 gulp.task('watch', function () {
