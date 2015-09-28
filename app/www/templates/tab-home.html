@@ -1,15 +1,21 @@
 <ion-view hide-nav-bar="true">
-  <ion-content class="padding">
+  <ion-content>
     <ion-slide-box>
-      <ion-slide>
-        <div class="box blue"><h1>BLUE</h1></div>
+      <ion-slide ng-repeat="banner in banners">
+        <div class="box">
+          <img ng-src="{{banner.image || 'img/tab-home/banner.png'}}" ui-sref="shop"/>
+        </div>
       </ion-slide>
-      <ion-slide>
-        <div class="box yellow"><h1>YELLOW</h1></div>
-      </ion-slide>
-      <ion-slide>
-        <div class="box pink"><h1>PINK</h1></div>
-      </ion-slide>
+      <!--<ion-slide>-->
+        <!--<div class="box">-->
+          <!--<img ng-src="{{banners[1].image || 'img/tab-home/banner.png'}}" ui-sref="shop"/>-->
+        <!--</div>-->
+      <!--</ion-slide>-->
+      <!--<ion-slide>-->
+        <!--<div class="box">-->
+          <!--<img ng-src="{{banners[2].image || 'img/tab-home/banner.png'}}" ui-sref="shop"/>-->
+        <!--</div>-->
+      <!--</ion-slide>-->
     </ion-slide-box>
     <div class="list card">
       <div class="item item-divider">Recent Updates</div>

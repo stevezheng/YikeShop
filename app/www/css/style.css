@@ -2,3 +2,13 @@
 ion-tabs.tabs-color-active-assertive .tab-item {
    color: #C1C1C1;
 }
+
+/*重置banner样式*/
+.slider-pager {
+  font-size: 10px;
+}
+
+.slider-pager .slider-pager-page {
+  color: #ffffff;
+}
+
