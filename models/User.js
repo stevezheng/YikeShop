@@ -35,13 +35,13 @@ var User = AV.Object.extend('_User',
      * @param user 用户实例
      * @returns {*|AV.Promise}
      */
-    isShop: function (user) {
+    isSeller: function (user) {
       return this.getMyRole(user)
         .then(function (data) {
           if (!data) {
             return false;
           } else {
-            return (data.get('name') === 'shop');
+            return (data.get('name') === 'seller');
           }
         })
     }
